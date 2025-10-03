@@ -1,0 +1,14 @@
+{
+  "name": "Epoch",
+  "short_name": "Epoch",
+  "start_url": "/epoch/index.html",
+  "display": "standalone",
+  "description": "A simple epoch clock",
+  "icons": [
+    {
+      "src": "favicon.svg",
+      "type": "image/svg+xml",
+      "sizes": "any"
+    }
+  ]
+}

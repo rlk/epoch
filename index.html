@@ -1,0 +1,70 @@
+<html>
+
+<head>
+  <title>epoch</title>
+  <meta charset="UTF-8">
+  <link rel="manifest" href="manifest.json" />
+  <link rel="icon" href="favicon.svg" sizes="any" type="image/svg+xml">
+  <meta name="mobile-web-app-capable" content="yes">
+  <style type="text/css">
+    body {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      margin: 0;
+      background: black;
+    }
+
+    div {
+      font-family: monospace;
+      font-size: 3vw;
+      line-height: 1.5;
+      color: white;
+    }
+
+    #decimal {
+      font-size: 5vw;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="decimal"></div>
+  <div id="binary"></div>
+  <div id="utc"></div>
+  <div id="local"></div>
+</body>
+
+<script>
+  const decimal = document.querySelector('#decimal');
+  const binary = document.querySelector('#binary');
+  const local = document.querySelector('#local');
+  const utc = document.querySelector('#utc');
+  const options = {
+    hour12: false,
+    weekday: 'short',
+    year: 'numeric',
+    month: 'short',
+    day: '2-digit',
+    hour: '2-digit',
+    minute: '2-digit',
+    second: '2-digit',
+    timeZoneName: 'short'
+  };
+
+  function tick() {
+    var now = new Date();
+    var seconds = Math.floor(now.valueOf() / 1000.0);
+    decimal.innerHTML = seconds.toLocaleString();
+    binary.innerHTML = seconds.toString(2);
+    local.innerHTML = now.toLocaleString('en-US', options);
+    utc.innerHTML = now.toLocaleString('en-US', { ...options, timeZone: 'UTC' });
+  }
+
+  tick();
+  window.setInterval(tick, 1000);
+</script>
+
+</html>

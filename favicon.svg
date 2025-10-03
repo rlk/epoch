@@ -1,9 +1,9 @@
-<svg version="1.1" viewBox="0.0 0.0 100.0 100.0" stroke="none"
+<svg version="1.1" viewBox="0.0 0.0 32.0 32.0" stroke="none"
   xmlns:xlink="http://www.w3.org/1999/xlink"
   xmlns="http://www.w3.org/2000/svg">
   <g>
-    <rect fill="hsla(210, 100%, 60%, 1.00)" x="00.0" y="25" width="33.3" height="50"/>
-    <rect fill="hsla( 30, 100%, 60%, 1.00)" x="33.3" y="25" width="33.3" height="50"/>
-    <rect fill="hsla(210, 100%, 60%, 1.00)" x="66.6" y="25" width="33.3" height="50"/>
+    <rect fill="hsla(210, 100%, 66%, 1.0)" x=" 1" y="8" width="10" height="16"/>
+    <rect fill="hsla( 30, 100%, 66%, 1.0)" x="11" y="8" width="10" height="16"/>
+    <rect fill="hsla(210, 100%, 66%, 1.0)" x="21" y="8" width="10" height="16"/>
   </g>
 </svg>
